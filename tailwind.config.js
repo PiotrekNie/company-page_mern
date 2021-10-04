@@ -18,8 +18,8 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
     fontFamily: {
-      sans: ["HelveticaNeue", "Arial", "sans-serif"],
-      regular: ["Arial", "HelveticaNeue", "sans-serif"],
+      sans: ["League Spartan", "Arial", "sans-serif"],
+      serif: ["Playfair Display", "serif"],
     },
     colors: {
       transparent: "transparent",
