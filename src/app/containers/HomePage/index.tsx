@@ -13,6 +13,8 @@ const PageContainer = styled.div`
     overflow-x-hidden
     bg-white
     shadow-2xl
+    px-3
+    xl:px-0
   `}
 `;
 

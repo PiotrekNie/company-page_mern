@@ -22,6 +22,7 @@ body {
   font-family: 'League Spartan', 'arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply text-gray;
 }
 
 code {

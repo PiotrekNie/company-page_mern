@@ -12,7 +12,7 @@ const AppContainer = styled.div`
     w-full
     h-full
     p-3
-    md:p-6
+    xl:p-6
   `}
 `;
 
