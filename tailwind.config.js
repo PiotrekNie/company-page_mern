@@ -12,10 +12,10 @@ module.exports = {
       // => @media (min-width: 768px) { ... }
 
       lg: "992px",
-      // => @media (min-width: 1024px) { ... }
+      // => @media (min-width: 1200px) { ... }
 
       xl: "1200px",
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 1200px) { ... }
     },
     fontFamily: {
       sans: ["League Spartan", "Arial", "sans-serif"],
@@ -30,8 +30,14 @@ module.exports = {
     },
     extend: {
       colors: {
+        orange: {
+          DEFAULT: "#fecd4d",
+        },
         green: {
           DEFAULT: "#b4c851",
+        },
+        gray: {
+          DEFAULT: "#0b0c11",
         },
       },
       textColor: {
@@ -60,6 +66,9 @@ module.exports = {
       },
       container: {
         center: true,
+      },
+      letterSpacing: {
+        widest: "0.5em",
       },
     },
   },
