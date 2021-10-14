@@ -37,7 +37,11 @@ module.exports = {
           DEFAULT: "#b4c851",
         },
         gray: {
+          400: "#cccccc",
           DEFAULT: "#0b0c11",
+        },
+        yellow: {
+          DEFAULT: "#fecd4d",
         },
       },
       textColor: {
@@ -48,6 +52,9 @@ module.exports = {
       zIndex: {
         "-10": -10,
         999: 999,
+      },
+      minHeight: {
+        9: "9rem",
       },
       maxWidth: {
         min: "min-content",
@@ -62,7 +69,9 @@ module.exports = {
         "-6": "-1.5rem",
       },
       fontSize: {
+        xxs: "0.563rem",
         "4xl": "2rem",
+        "5xl": "2.6rem",
       },
       container: {
         center: true,

@@ -1,10 +1,8 @@
 const menuStyles = {
   bmBurgerButton: {
-    position: "absolute",
     width: "20px",
     height: "20px",
-    right: "20px",
-    top: "20px",
+    position: "relative",
   },
   bmBurgerBars: {
     background: "#373a47",
@@ -17,7 +15,7 @@ const menuStyles = {
     width: "24px",
   },
   bmCross: {
-    background: "#bdc3c7",
+    background: "#000000",
   },
   bmMenuWrap: {
     position: "fixed",
@@ -27,21 +25,26 @@ const menuStyles = {
   },
   bmMenu: {
     background: "#373a47",
-    padding: "2.5em 1.5em 0",
+    padding: "2.5em 1.5em 0 2.5rem",
     fontSize: "1.15em",
+    backgroundColor: "#fecd4d",
   },
   bmMorphShape: {
     fill: "#373a47",
   },
   bmItemList: {
-    color: "#b8b7ad",
-    padding: "0.8em",
+    color: "#000000",
+    letterSpacing: "0.1em",
+    display: "flex",
+    alignItems: "center",
   },
   bmItem: {
     display: "inline-block",
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)",
+    top: "0px",
+    left: "0px",
   },
 };
 

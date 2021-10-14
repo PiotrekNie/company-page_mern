@@ -29,3 +29,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h3 {
+  @apply font-serif text-3xl font-normal leading-none;
+}

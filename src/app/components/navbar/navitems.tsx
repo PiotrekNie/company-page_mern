@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
@@ -10,6 +10,7 @@ const ListContainer = styled.nav`
   ${tw`
   flex
   list-none
+  items-center
   md:col-span-3
   `}
 `;
@@ -21,7 +22,7 @@ const NavItemContainer = styled.ul`
   `}
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.li<{ menu?: any }>`
   ${tw`
     uppercase
     text-sm
@@ -62,6 +63,17 @@ const NavItem = styled.li`
       `}
     }
   }
+
+  ${({ menu }) =>
+    menu &&
+    css`
+      ${tw`
+    text-sm tracking-wider
+  `}
+      &:not(:last-child) {
+        ${tw` mb-4 `}
+      }
+    `};
 `;
 
 export function NavItems() {
@@ -71,19 +83,19 @@ export function NavItems() {
     return (
       <Menu right styles={menuStyles}>
         <NavItemContainer>
-          <NavItem>
+          <NavItem menu>
             <a href="/">HOME</a>
           </NavItem>
-          <NavItem>
+          <NavItem menu>
             <a href="/">OFERTA</a>
           </NavItem>
-          <NavItem>
+          <NavItem menu>
             <a href="/">O FIRMIE</a>
           </NavItem>
-          <NavItem>
+          <NavItem menu>
             <a href="/">JAKOŚĆ</a>
           </NavItem>
-          <NavItem>
+          <NavItem menu>
             <a href="/">KONTAKT</a>
           </NavItem>
         </NavItemContainer>

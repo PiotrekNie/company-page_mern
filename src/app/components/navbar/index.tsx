@@ -4,12 +4,22 @@ import tw from "twin.macro";
 import { Logo } from "../logo";
 import { NavItems } from "./navitems";
 
-const NavbarContainer = styled.div`
-  min-height: 140px;
+const Header = styled.div`
   ${tw`
-    container
-    grid
+  w-full
+  `}
+`;
+
+const NavbarContainer = styled.div`
+  ${tw`
+  container
+    md:grid
     md:grid-cols-4
+    flex
+    items-center
+    relative
+    justify-between
+  md:min-h-9 py-6 md:py-0
   `}
 `;
 
@@ -22,11 +32,13 @@ const LogoContainer = styled.div`
 
 export function NavBar() {
   return (
-    <NavbarContainer>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
-      <NavItems />
-    </NavbarContainer>
+    <Header>
+      <NavbarContainer>
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
+        <NavItems />
+      </NavbarContainer>
+    </Header>
   );
 }
