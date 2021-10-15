@@ -41,10 +41,10 @@ export function ProductCategories() {
           color={COLORS.orange}
           img={{
             url: Mattress,
-            alt: "Meble tapicerowane",
+            alt: "Materace",
           }}
-          title={"Meble tapicerowane"}
-          url={"/"}
+          title={"Materace"}
+          url={"/materace"}
         />
         <ProductCategory
           color={COLORS.aqua}
@@ -76,7 +76,7 @@ export function ProductCategories() {
           title={"Akcesoria"}
           url={"/"}
           position={{
-            left: 40,
+            left: 80,
             bottom: -30,
           }}
         />

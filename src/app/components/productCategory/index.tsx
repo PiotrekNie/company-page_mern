@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import tw from "twin.macro";
+import { Link } from "react-router-dom";
 
 interface ProductProps {
   color: string;
@@ -20,6 +21,12 @@ const ProductCategoryContainer = styled.div`
   ${tw`
     flex flex-col items-center relative mb-8
   `}
+
+  a {
+    ${tw`
+    block text-xs font-bold tracking-widest uppercase mt-4 hover:underline
+  `}
+  }
 `;
 
 const ImageContainer = styled.div<{
@@ -41,7 +48,7 @@ const ImageContainer = styled.div<{
   }
   img {
     ${tw`
-      absolute -bottom-16 left-0 z-10 pointer-events-none max-w-none
+      absolute -bottom-16 left-16 z-10 pointer-events-none max-w-none
     `}
 
     ${({ left }) =>
@@ -57,13 +64,7 @@ const ImageContainer = styled.div<{
       `}
   }
   ${tw` 
-    relative mb-8 w-full
-  `}
-`;
-
-const ProductCategoryLink = styled.a`
-  ${tw`
-    block text-xs font-bold tracking-widest uppercase mt-4 hover:underline
+    relative mb-8 w-full md:pl-10
   `}
 `;
 
@@ -78,9 +79,9 @@ export function ProductCategory(props: ProductProps) {
         <img src={props.img.url} alt={props.img.alt} />
       </ImageContainer>
       <h3>{props.title}</h3>
-      <ProductCategoryLink href={props.url} title={props.title}>
+      <Link to={props.url} title={props.title}>
         SPRAWDŹ
-      </ProductCategoryLink>
+      </Link>
     </ProductCategoryContainer>
   );
 }
