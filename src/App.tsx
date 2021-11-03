@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import styled from "styled-components";
 import { HomePage } from "./app/containers/HomePage";
 import tw from "twin.macro";

@@ -1,0 +1,8 @@
+h2 {
+  @apply font-serif leading-tight font-bold;
+  @include fluid-type(28, 42, 480, 1200);
+}
+
+h3 {
+  @apply font-serif text-3xl font-normal leading-none;
+}

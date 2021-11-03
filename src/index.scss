@@ -17,19 +17,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'League Spartan', 'arial', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @apply text-gray;
-}
+@import 'app/assets/scss/mixins';
+@import 'app/assets/scss/reset';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+// Components
+@import 'app/assets/scss/components/body';
 
-h3 {
-  @apply font-serif text-3xl font-normal leading-none;
-}
+// Partials
+@import 'app/assets/scss/partials/titles';
+@import 'app/assets/scss/partials/buttons';
+

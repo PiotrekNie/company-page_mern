@@ -24,8 +24,20 @@ const ProductCategoryContainer = styled.div`
 
   a {
     ${tw`
-    block text-xs font-bold tracking-widest uppercase mt-4 hover:underline
+    block text-xs font-bold tracking-widest uppercase mt-4 relative
   `}
+    &:before {
+      content: "";
+      transform: scaleX(0) translateX(-50%);
+      ${tw`
+      block h-px bg-black w-full absolute left-1/2 -bottom-2 transition-transform origin-left ease-out duration-300
+    `};
+    }
+    &:hover {
+      &:before {
+        transform: scaleX(1) translateX(-50%);
+      }
+    }
   }
 `;
 

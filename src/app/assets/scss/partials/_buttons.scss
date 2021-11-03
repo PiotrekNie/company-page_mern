@@ -1,0 +1,19 @@
+.cta {
+  @apply inline-block px-6 py-4 relative tracking-widest text-xs z-10 w-auto uppercase;
+  &:before {
+    max-width: 2.25rem;
+  content: '';
+  transition: max-width 300ms ease-out;
+  @apply absolute top-1/2 left-0 transform -translate-y-1/2 block rounded-full w-full h-9 -z-10 pointer-events-none;
+  }
+  &-yellow {
+    &:before {
+      @apply bg-yellow;
+    }
+  }
+  &:hover {
+    &:before {
+      max-width: 100%;
+    }
+  }
+}

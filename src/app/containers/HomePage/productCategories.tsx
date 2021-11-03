@@ -15,7 +15,7 @@ import BedFranes from "../../assets/images/stelaze.png";
 import Accessories from "../../assets/images/akcesoria.png";
 import Upholstered from "../../assets/images/meble.png";
 
-const ProductCategoriesContainer = styled.div`
+const ProductCategoriesContainer = styled.section`
   ${tw` container `};
 `;
 
