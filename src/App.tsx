@@ -10,6 +10,12 @@ import { COLORS } from "./app/components/colors";
 import { SCREENS } from "./app/components/responsive";
 import { Mattresses } from "./app/containers/Mattresses";
 
+/**
+ *  Images
+ */
+import BackgroundBottom from "./app/assets/images/background-bottom.jpg";
+import { Footer } from "./app/components/footer";
+
 const AppContainer = styled.div`
   background: linear-gradient(to bottom, #fecd4d 0%, #ef647b 100%);
   ${tw`
@@ -19,6 +25,13 @@ const AppContainer = styled.div`
     h-full
     p-3
     xl:p-6
+  `}
+`;
+
+const AppContainerBg = styled.img`
+  transform: translateX(-50%);
+  ${tw`
+    absolute left-1/2 bottom-0 pointer-events-none -z-10 w-full
   `}
 `;
 
@@ -78,6 +91,8 @@ function App() {
             </Route>
           </Switch>
           <Sidebar />
+          <Footer />
+          <AppContainerBg src={BackgroundBottom} alt="MaxMeble" />
         </PageContainer>
       </AppContainer>
     </Router>
