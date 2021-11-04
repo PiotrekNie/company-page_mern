@@ -2,6 +2,7 @@ import React from "react";
 import { Blockquote } from "../../components/blockquote";
 
 import { ProductCategories } from "./productCategories";
+import { SectionContact } from "./sectionContact";
 import { SectionGallery } from "./sectionGallery";
 import { SectionIcons } from "./sectionIcons";
 
@@ -23,6 +24,7 @@ export function HomePage() {
         linkText={"dowiedz się więcej"}
       />
       <SectionIcons />
+      <SectionContact />
     </div>
   );
 }

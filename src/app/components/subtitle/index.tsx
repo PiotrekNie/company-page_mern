@@ -7,7 +7,7 @@ const SubtitleCont = styled.div`
 `;
 
 const H2Span1 = styled.span`
-  ${tw` text-xs tracking-widest block font-bold text-yellow leading-4 uppercase`};
+  ${tw` text-xs tracking-widest block font-sans font-bold text-yellow leading-4 uppercase`};
 `;
 
 const H2Span2 = styled.span`

@@ -1,0 +1,17 @@
+<svg id="marker" xmlns="http://www.w3.org/2000/svg" width="85" height="111" viewBox="0 0 85 111">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0d1526;
+        opacity: 0.21;
+      }
+
+      .cls-2 {
+        fill: #fecd4d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-1" cx="43" cy="109.5" rx="27" ry="1.5"/>
+  <path id="pin" class="cls-2" d="M783.5,1157a42.5,42.5,0,0,1,42.5,42.5c0,23.47-42,68.5-42,68.5s-43-45.03-43-68.5A42.5,42.5,0,0,1,783.5,1157Zm0,23a15.5,15.5,0,1,1-15.5,15.5A15.5,15.5,0,0,1,783.5,1180Z" transform="translate(-741 -1157)"/>
+</svg>

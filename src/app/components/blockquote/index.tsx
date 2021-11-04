@@ -9,7 +9,7 @@ interface QuoteProps {
 
 const QuoteContainer = styled.section`
   ${tw`
-    text-center md:py-36 relative container
+    text-center md:py-36 relative container z-20
   `};
   &:before {
     content: "";
