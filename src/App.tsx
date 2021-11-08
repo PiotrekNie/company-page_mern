@@ -30,7 +30,7 @@ const AppContainer = styled.div`
 const AppContainerBg = styled.img`
   transform: translateX(-50%);
   ${tw`
-    absolute left-1/2 bottom-0 pointer-events-none -z-10 w-full
+    absolute left-1/2 bottom-0 pointer-events-none -z-10 w-full overflow-x-hidden
   `}
 `;
 
@@ -41,7 +41,6 @@ const PageContainer = styled.div`
     w-full
     h-full
     items-center
-    overflow-x-hidden
     bg-white
     shadow-2xl
     px-3

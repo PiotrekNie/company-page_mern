@@ -10,7 +10,7 @@ export function SplitText(props: SplitTextProps) {
     <div className={props.className} aria-label={props.copy}>
       {props.copy.split("").map((char, index) => {
         return (
-          <span aria-hidden="true" key={index}>
+          <span key={index} className={char === " " ? "h-2" : ""}>
             {char}
           </span>
         );

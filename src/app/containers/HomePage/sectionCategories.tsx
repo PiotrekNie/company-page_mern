@@ -23,7 +23,7 @@ const ProductCategoriesGrid = styled.div`
   ${tw` grid grid-cols-2 gap-4 `};
 `;
 
-export function ProductCategories() {
+export function SectionCategories() {
   return (
     <ProductCategoriesContainer>
       <Subtitle subtitle1={"NASZE"} subtitle2={"Produkty"} />

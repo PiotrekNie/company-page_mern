@@ -3,7 +3,8 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Blockquote } from "../../components/blockquote";
 
-import { ProductCategories } from "./productCategories";
+import { SectionCarousel } from "./sectionCarousel";
+import { SectionCategories } from "./sectionCategories";
 import { SectionContact } from "./sectionContact";
 import { SectionGallery } from "./sectionGallery";
 import { SectionIcons } from "./sectionIcons";
@@ -17,15 +18,16 @@ import Background from "../../assets/images/background.jpg";
 const HomeBg = styled.img`
   transform: translate(-50%, -50%);
   ${tw`
-    left-1/2 top-1/2 absolute pointer-events-none -z-10 max-w-none
+    left-1/2 top-1/2 absolute pointer-events-none -z-10 max-w-none w-full h-full object-contain
   `}
 `;
 
 export function HomePage() {
   return (
-    <main>
+    <main className="flex">
       <div>
-        <ProductCategories />
+        <SectionCarousel />
+        <SectionCategories />
         <Blockquote
           quote={
             "Sen jest jedną z najwspanialszuch rzeczy, którą możesz podarować sobie całkowicie za darmo."
