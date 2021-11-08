@@ -3,7 +3,6 @@ import "./App.scss";
 import styled from "styled-components";
 import { HomePage } from "./app/containers/HomePage";
 import tw from "twin.macro";
-import { Sidebar } from "./app/components/sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavBar } from "./app/components/navbar";
 import { COLORS } from "./app/components/colors";
@@ -90,7 +89,6 @@ function App() {
               <Mattresses color={"#fecd4d"} title={"Materace"} />
             </Route>
           </Switch>
-          <Sidebar />
           <Footer />
           <AppContainerBg src={BackgroundBottom} alt="MaxMeble" />
         </PageContainer>

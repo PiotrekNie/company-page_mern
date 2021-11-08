@@ -8,17 +8,17 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SplitText } from "../SplitText";
 
-const SidebarContainer = styled.div`
+const PageDescription = styled(SplitText)`
   ${tw`
-    flex flex-col fixed top-96 right-40 z-50 w-4
+    flex flex-col
   `}
 `;
 
-const SidebarText = styled.span`
-  transform: rotate(-90deg);
+const SidebarContainer = styled.div`
   ${tw`
-    text-xxs text-gray-400 uppercase tracking-widest block whitespace-nowrap
+    flex flex-col sticky top-0 right-40 z-50
   `}
 `;
 
@@ -71,7 +71,10 @@ const SidebarNav = styled.nav<{ isLang?: boolean; isSocials?: boolean }>`
 export function Sidebar() {
   return (
     <SidebarContainer>
-      <SidebarText>Materace dla&nbsp;ciebie i&nbsp;twojej rodziny</SidebarText>
+      <PageDescription
+        className="page-description"
+        copy={"Materace dla ciebie i twojej rodziny"}
+      />
       <SidebarNav isLang>
         <ul>
           <li>

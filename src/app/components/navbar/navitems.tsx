@@ -5,6 +5,7 @@ import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
 import { SCREENS } from "../responsive";
 import menuStyles from "./menuStyles";
+import { Link } from "react-router-dom";
 
 const ListContainer = styled.nav`
   ${tw`
@@ -84,19 +85,19 @@ export function NavItems() {
       <Menu right styles={menuStyles}>
         <NavItemContainer>
           <NavItem menu>
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
           </NavItem>
           <NavItem menu>
-            <a href="/">OFERTA</a>
+            <Link to="/">OFERTA</Link>
           </NavItem>
           <NavItem menu>
-            <a href="/">O FIRMIE</a>
+            <Link to="/">O FIRMIE</Link>
           </NavItem>
           <NavItem menu>
-            <a href="/">JAKOŚĆ</a>
+            <Link to="/">JAKOŚĆ</Link>
           </NavItem>
           <NavItem menu>
-            <a href="/">KONTAKT</a>
+            <Link to="/">KONTAKT</Link>
           </NavItem>
         </NavItemContainer>
       </Menu>
@@ -106,19 +107,19 @@ export function NavItems() {
     <ListContainer>
       <NavItemContainer>
         <NavItem>
-          <a href="/">HOME</a>
+          <Link to="/">HOME</Link>
         </NavItem>
         <NavItem>
-          <a href="/">OFERTA</a>
+          <Link to="/">OFERTA</Link>
         </NavItem>
         <NavItem>
-          <a href="/">O FIRMIE</a>
+          <Link to="/">O FIRMIE</Link>
         </NavItem>
         <NavItem>
-          <a href="/">JAKOŚĆ</a>
+          <Link to="/">JAKOŚĆ</Link>
         </NavItem>
         <NavItem>
-          <a href="/">KONTAKT</a>
+          <Link to="/">KONTAKT</Link>
         </NavItem>
       </NavItemContainer>
     </ListContainer>

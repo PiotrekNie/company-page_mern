@@ -11,6 +11,7 @@ h4 {
   @apply font-serif font-bold text-lg;
 }
 
+h6,
 .h6 {
-  @apply text-xs tracking-widest font-bold
-;}
+  @apply text-xs tracking-widest font-bold block
+}

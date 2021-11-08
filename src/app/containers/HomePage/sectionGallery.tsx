@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
  */
 import Img1 from "../../assets/images/girl.jpg";
 import Img2 from "../../assets/images/bed.jpg";
-import Background from "../../assets/images/background.jpg";
 
 interface SectionGalleryProps {
   text: string;
@@ -19,13 +18,6 @@ interface SectionGalleryProps {
 const SectionGalleryContainer = styled.section`
   ${tw`
     pt-16 relative z-10
-  `}
-`;
-
-const SectionGalleryBg = styled.img`
-  transform: translate(-50%, -50%);
-  ${tw`
-    left-1/2 top-1/2 absolute pointer-events-none -z-10 max-w-none
   `}
 `;
 
@@ -78,7 +70,6 @@ export function SectionGallery(props: SectionGalleryProps) {
           </Row2>
         </div>
       </div>
-      <SectionGalleryBg src={Background} alt={props.linkText} />
     </SectionGalleryContainer>
   );
 }

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { Subtitle } from "../../components/subtitle";
 import { Map } from "../../components/googleMaps";
 
-const ContactContainer = styled.div`
+const ContactContainer = styled.section`
   ${tw`
     container
   `}

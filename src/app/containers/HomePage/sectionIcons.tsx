@@ -30,7 +30,7 @@ const IconRow = styled.div`
   `}
 `;
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   ${tw`
     container pt-60 z-10 relative
   `}

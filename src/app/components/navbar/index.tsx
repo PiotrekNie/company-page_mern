@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { Logo } from "../logo";
 import { NavItems } from "./navitems";
 
-const Header = styled.div`
+const Header = styled.header`
   ${tw`
   w-full
   `}
