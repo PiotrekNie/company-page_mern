@@ -34,6 +34,7 @@ module.exports = {
           DEFAULT: "#fecd4d",
         },
         green: {
+          500: "#d3da24",
           DEFAULT: "#b4c851",
         },
         gray: {

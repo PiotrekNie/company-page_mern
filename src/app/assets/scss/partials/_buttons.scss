@@ -11,6 +11,11 @@
       @apply bg-yellow;
     }
   }
+  &-green {
+    &:before {
+      @apply bg-green-500;
+    }
+  }
   &:hover {
     &:before {
       max-width: 100%;
