@@ -1,0 +1,72 @@
+$yellow: #fecd4d;
+$white: #ffffff;
+
+.SliderWrapper {
+  :global(.swiper-pagination) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  :global(.swiper-pagination-bullet) {
+    width: 10px;
+    height: 10px;;
+    margin-right: 9px !important;
+    margin-left: 9px !important;
+    @apply block bg-yellow relative z-10 transition-opacity duration-300 ease-out;
+    &:before,
+    &:after {
+      content: '';
+      @apply block absolute pointer-events-none rounded-full;
+    }
+    &:before {
+      z-index: -5;
+      width: 22px;
+      height: 22px;
+      border: 6px solid $white;
+      transform: translate(-50%, -50%);
+      @apply top-1/2 left-1/2 opacity-0;
+    }
+    &:after {
+      width: 27px;
+      height: 27px;
+      clip: rect(0px, 0rem, 0rem, 0px);
+      transform: rotate(90deg) translate(-50%, -50%);
+      transform-origin: left top;
+      @apply bg-yellow left-1/2 top-1/2 -z-10 opacity-0;
+    }
+  }
+  :global(.swiper-pagination-bullet-active) {
+    @apply opacity-100;
+    &:before,
+    &:after {
+      @apply opacity-100;
+    }
+    &:after {
+      animation: spin 300ms ease-out forwards;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    clip: rect(0px, 0, 0, 0px);
+  }
+  to {
+    clip: rect(0px, 0.75rem, 0.75rem, 0px);
+  }
+}
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+@keyframes leftspin {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+/* Set the wrapper clip to auto, effectively removing the clip */
+@keyframes closewrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
+}

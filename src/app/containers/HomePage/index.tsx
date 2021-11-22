@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Blockquote } from "../../components/blockquote";
 
-import { SectionCarousel } from "./sectionCarousel";
+import { SectionCarousel } from "../../components/carousel";
 import { SectionCategories } from "./sectionCategories";
 import { SectionContact } from "./sectionContact";
 import { SectionGallery } from "./sectionGallery";
