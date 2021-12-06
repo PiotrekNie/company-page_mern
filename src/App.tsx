@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavBar } from "./app/components/navbar";
 import { COLORS } from "./app/components/colors";
 import { SCREENS } from "./app/components/responsive";
-import { Mattresses } from "./app/containers/Mattresses";
+import { ProductCategory } from "./app/containers/ProductCategory";
 
 /**
  *  Images
@@ -85,7 +85,7 @@ function App() {
               <HomePage />
             </Route>
             <Route path="/materace">
-              <Mattresses color={"#fecd4d"} title={"Materace"} />
+              <ProductCategory color={"#fecd4d"} title={"Materace"} />
             </Route>
           </Switch>
           <Footer />

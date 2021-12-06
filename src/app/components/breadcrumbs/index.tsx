@@ -16,6 +16,19 @@ const BreadcrumbsContainer = styled.ul`
     ${tw`
       block
     `}
+    &:not(:last-child) {
+      &:after {
+        content: "/";
+        ${tw`
+          mx-1
+        `}
+      }
+    }
+  }
+  a {
+    ${tw`
+      hover:underline
+    `}
   }
 `;
 
@@ -24,7 +37,7 @@ export function Breadcrumbs(props: BreadcrumbsProps) {
     <BreadcrumbsContainer>
       <li>
         <Link to="/" title="Strona główna">
-          Home
+          home
         </Link>
       </li>
       {props.link.map((el, index) => {
@@ -40,7 +53,6 @@ export function Breadcrumbs(props: BreadcrumbsProps) {
           </li>
         );
       })}
-      ;
     </BreadcrumbsContainer>
   );
 }
