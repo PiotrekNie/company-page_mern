@@ -5,7 +5,7 @@ import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
 import { SCREENS } from "../responsive";
 import menuStyles from "./menuStyles";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const ListContainer = styled.nav`
   ${tw`
@@ -110,7 +110,9 @@ export function NavItems() {
           <Link to="/">HOME</Link>
         </NavItem>
         <NavItem>
-          <Link to="/">OFERTA</Link>
+          <Link smooth to="#offer">
+            OFERTA
+          </Link>
         </NavItem>
         <NavItem>
           <Link to="/">O FIRMIE</Link>

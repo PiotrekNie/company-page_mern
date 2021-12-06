@@ -25,8 +25,8 @@ const ProductCategoriesGrid = styled.div`
 
 export function SectionCategories() {
   return (
-    <ProductCategoriesContainer>
-      <Subtitle subtitle1={"NASZE"} subtitle2={"Produkty"} />
+    <ProductCategoriesContainer id="offer">
+      <Subtitle subtitle1={"NASZA"} subtitle2={"Oferta"} />
       <ProductCategoriesGrid>
         <ProductCategory
           color={COLORS.green}
