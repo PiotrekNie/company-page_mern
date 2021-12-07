@@ -26,9 +26,9 @@ const NavItemContainer = styled.ul`
 const NavItem = styled.li<{ menu?: any }>`
   ${tw`
     uppercase
-    text-sm
+    text-xs
     tracking-widest
-    font-bold
+    font-semibold
   `}
   &:not(:last-child) {
     ${tw`
@@ -38,8 +38,7 @@ const NavItem = styled.li<{ menu?: any }>`
   }
   a {
     ${tw`
-    block
-      relative
+    block relative
     `}
     &:hover {
       &:before {

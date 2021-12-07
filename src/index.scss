@@ -2,25 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-weight: 400;
-  font-family: 'League Spartan';
-  src: url('app/assets/fonts/LeagueSpartan-Regular.woff') format('woff'),
-    url('app/assets/fonts/LeagueSpartan-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 700;
-  font-family: 'League Spartan';
-  src: url('app/assets/fonts/LeagueSpartan-Bold.woff2') format('woff'),
-    url('app/assets/fonts/LeagueSpartan-Bold.woff2') format('woff2');
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
 @import 'app/assets/scss/mixins';
 @import 'app/assets/scss/reset';
 
 // Components
+@import 'app/assets/scss/components/fonts';
 @import 'app/assets/scss/components/body';
 
 // Partials

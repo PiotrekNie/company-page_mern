@@ -24,7 +24,7 @@ const ProductCategoryContainer = styled.div`
 
   a {
     ${tw`
-    block text-xs font-bold tracking-widest uppercase mt-4 relative
+    block text-xxs font-semibold tracking-widest uppercase mt-3 relative
   `}
     &:before {
       content: "";

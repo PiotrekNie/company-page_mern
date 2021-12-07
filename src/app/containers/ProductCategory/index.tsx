@@ -13,6 +13,17 @@ interface Category {
   title: string;
 }
 
+const Main = styled.main`
+  ${tw`
+    w-full
+  `}
+  p {
+    ${tw`
+       leading-relaxed
+    `}
+  }
+`;
+
 const CategoryKv = styled.div<{ color: string }>`
   ${tw`
     container
@@ -61,19 +72,33 @@ export function ProductCategory(props: Category) {
   const isDesktop = useMediaQuery({ minWidth: SCREENS.md });
 
   return (
-    <CategoryKv color={props.color}>
-      <div className="w-8/12 flex justify-center">
-        <CategoryTitle>
-          <h1>{props.title}</h1>
-          <Breadcrumbs link={[{ url: "/materace", title: "materace" }]} />
-        </CategoryTitle>
-        {isDesktop && (
-          <KvImage>
-            <img src={Image} alt={props.title} />
-            <KvImageApla />
-          </KvImage>
-        )}
-      </div>
-    </CategoryKv>
+    <Main>
+      <section>
+        <CategoryKv color={props.color}>
+          <div className="w-8/12 flex justify-center">
+            <CategoryTitle>
+              <h1 className="mb-3">{props.title}</h1>
+              <Breadcrumbs link={[{ url: "/materace", title: "materace" }]} />
+            </CategoryTitle>
+            {isDesktop && (
+              <KvImage>
+                <img src={Image} alt={props.title} />
+                <KvImageApla />
+              </KvImage>
+            )}
+          </div>
+        </CategoryKv>
+        <div className="py-7 flex container">
+          <div className="w-5/12">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+              accumsan lacus vel facilisis.
+            </p>
+          </div>
+        </div>
+      </section>
+    </Main>
   );
 }
