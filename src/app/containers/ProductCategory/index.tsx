@@ -7,6 +7,7 @@ import { SCREENS } from "../../components/responsive";
 
 // Images
 import Image from "../../assets/images/matress.png";
+import { Sidebar } from "../../components/category-sidebar";
 
 interface Category {
   color: string;
@@ -68,6 +69,12 @@ const KvImageApla = styled.div`
   }
 `;
 
+const ProductList = styled.section`
+  ${tw`
+    container grid grid-cols-4
+  `}
+`;
+
 export function ProductCategory(props: Category) {
   const isDesktop = useMediaQuery({ minWidth: SCREENS.md });
 
@@ -99,6 +106,22 @@ export function ProductCategory(props: Category) {
           </div>
         </div>
       </section>
+
+      <ProductList>
+        <Sidebar
+          width={"1/3"}
+          items={[
+            { tekst: "Łóżka", link: "/lozka" },
+            {
+              tekst: "Materace",
+              link: "/materace",
+              submenu: [
+                { tekst: "Materace Bonellowe", link: "/materace-bonellowe" },
+              ],
+            },
+          ]}
+        />
+      </ProductList>
     </Main>
   );
 }

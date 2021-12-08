@@ -38,6 +38,7 @@ module.exports = {
           DEFAULT: "#b4c851",
         },
         gray: {
+          100: "#fafafa",
           400: "#cccccc",
           600: "#959595",
           700: "#616161",
