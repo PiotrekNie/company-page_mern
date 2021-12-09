@@ -48,6 +48,18 @@ module.exports = {
         yellow: {
           DEFAULT: "#fecd4d",
         },
+        blue: {
+          DEFAULT: "#00aeef",
+        },
+        purple: {
+          DEFAULT: "#00aeef",
+        },
+        azure: {
+          DEFAULT: "#48ede0",
+        },
+        red: {
+          DEFAULT: "#ef647b",
+        },
       },
       textColor: {
         primary: colors.black,

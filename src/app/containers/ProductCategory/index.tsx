@@ -4,10 +4,12 @@ import tw from "twin.macro";
 import { Breadcrumbs } from "../../components/breadcrumbs";
 import { useMediaQuery } from "react-responsive";
 import { SCREENS } from "../../components/responsive";
+import { Sidebar } from "../../components/category-sidebar";
+import { ProductGrid } from "../../components/products-grid";
 
 // Images
 import Image from "../../assets/images/matress.png";
-import { Sidebar } from "../../components/category-sidebar";
+import Mattress from "../../assets/images/materac.jpg";
 
 interface Category {
   color: string;
@@ -71,7 +73,22 @@ const KvImageApla = styled.div`
 
 const ProductList = styled.section`
   ${tw`
-    container grid grid-cols-4
+    container grid grid-cols-4 gap-x-4
+  `}
+`;
+
+const Products = [
+  {
+    image: { url: Mattress, alt: "Materac" },
+    category: { text: "Materace", url: "/materace", color: "yellow" },
+    title: "Materace Bonellowe",
+    link: { url: "/materace-bonellowe", text: "Sprawdź" },
+  },
+];
+
+const ExtendedProductList = styled.div`
+  ${tw`
+  md:col-span-3 xl:grid-cols-3 md:grid-cols-2 grid gap-4
   `}
 `;
 
@@ -109,7 +126,7 @@ export function ProductCategory(props: Category) {
 
       <ProductList>
         <Sidebar
-          width={"1/3"}
+          width={"w-full"}
           items={[
             { tekst: "Łóżka", link: "/lozka" },
             {
@@ -117,10 +134,30 @@ export function ProductCategory(props: Category) {
               link: "/materace",
               submenu: [
                 { tekst: "Materace Bonellowe", link: "/materace-bonellowe" },
+                { tekst: "Materace Kieszonkowe", link: "/materace-bonellowe" },
+                { tekst: "Materace Kokosowe", link: "/materace-bonellowe" },
+                { tekst: "Materace Lateksowe", link: "/materace-bonellowe" },
+                { tekst: "Materace Piankowe", link: "/materace-bonellowe" },
+                {
+                  tekst: "Materace Termoelastyczne",
+                  link: "/materace-bonellowe",
+                },
               ],
             },
+            { tekst: "Poduszki", link: "/lozka" },
+            { tekst: "Stelaże", link: "/lozka" },
+            { tekst: "Akcesoria", link: "/lozka" },
+            { tekst: "Meble tapicerowane", link: "/lozka" },
           ]}
         />
+        <ExtendedProductList>
+          <ProductGrid items={Products} />
+          <ProductGrid items={Products} />
+          <ProductGrid items={Products} />
+          <ProductGrid items={Products} />
+          <ProductGrid items={Products} />
+          <ProductGrid items={Products} />
+        </ExtendedProductList>
       </ProductList>
     </Main>
   );

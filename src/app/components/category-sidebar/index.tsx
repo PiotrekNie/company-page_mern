@@ -30,14 +30,30 @@ const ListItem = styled.li`
     `}
   &:not(:last-child) {
     ${tw`
-        mb-6
+        mb-5
       `}
+  }
+
+  a {
+    ${tw`
+      hover:underline
+    `}
   }
 
   ul {
     ${tw`
-        mt-6 text-sm pl-6
+        mt-5 text-sm pl-6
       `}
+    li {
+      ${tw`
+        font-normal font-sans
+      `}
+      &:not(:last-child) {
+        ${tw`
+          mb-4
+        `}
+      }
+    }
   }
 `;
 
@@ -48,16 +64,19 @@ export function Sidebar(props: ListProps) {
         {props.items.map((item, index) => (
           <ListItem key={index}>
             <Link to={item.link} title={item.tekst}>
-              {item}
-              {item.submenu &&
-                item.submenu.map((submenu, index) => (
+              {item.tekst}
+            </Link>
+            {item.submenu && (
+              <ul>
+                {item.submenu.map((submenu, index) => (
                   <li key={index}>
                     <Link to={submenu.link} title={submenu.tekst}>
                       {submenu.tekst}
                     </Link>
                   </li>
                 ))}
-            </Link>
+              </ul>
+            )}
           </ListItem>
         ))}
       </List>
