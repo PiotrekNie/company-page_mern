@@ -20,7 +20,7 @@ const SitebarContainer = styled.div`
 
 const List = styled.ul`
   ${tw`
-    flex flex-col
+    flex flex-col sticky top-0
   `}
 `;
 

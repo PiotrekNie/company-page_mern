@@ -26,16 +26,15 @@ const ProductContainer = styled.div`
 
 const CategoryLink = styled(Link)<{ color: string }>`
   ${tw`
-  text-yellow font-bold text-sm mb-3
+  text-yellow font-medium text-sm mb-3
   `}
+  ${({ color }) => color === "yellow" && tw`text-yellow`}
 
-  ${({ color }) => "yellow" && tw`text-yellow`}
+  ${({ color }) => color === "blue" && tw`text-blue`}
 
-  ${({ color }) => "blue" && tw`text-blue`}
+  ${({ color }) => color === "azure" && tw`text-azure`}
 
-  ${({ color }) => "red" && tw`text-blue`}
-
-  ${({ color }) => "azure" && tw`text-azure`}
+  ${({ color }) => color === "red" && tw`text-blue`}
 `;
 
 export function ProductGrid(props: ProductGridProps) {
@@ -50,7 +49,9 @@ export function ProductGrid(props: ProductGridProps) {
             <CategoryLink to={item.category.url} color={item.category.color}>
               {item.category.text}
             </CategoryLink>
-            <h2 className="text-base font-light mb-8">{item.title}</h2>
+            <h2 className="text-base font-light font-sans mb-8 tracking-wide">
+              {item.title}
+            </h2>
             <Link
               to={item.link.url}
               className={`cta cta-${item.category.color}`}

@@ -22,7 +22,7 @@ const Main = styled.main`
   `}
   p {
     ${tw`
-       leading-relaxed
+       leading-loose
     `}
   }
 `;
@@ -73,7 +73,7 @@ const KvImageApla = styled.div`
 
 const ProductList = styled.section`
   ${tw`
-    container grid grid-cols-4 gap-x-4
+    container grid grid-cols-4 gap-x-4 pb-14
   `}
 `;
 

@@ -1,5 +1,5 @@
 .cta {
-  @apply inline-block px-6 pt-4 pb-3 relative tracking-widest text-xs font-bold z-10 w-auto uppercase leading-none;
+  @apply inline-block px-6 pt-4 pb-3 relative tracking-widest text-xs font-medium z-10 w-auto uppercase leading-none;
   &:before {
     max-width: 2.25rem;
     content: '';
@@ -14,6 +14,17 @@
   &-green {
     &:before {
       @apply bg-green-500;
+    }
+  }
+  &-blue {
+    &:before {
+      @apply bg-blue;
+    }
+  }
+  &-white {
+    @apply text-primary;
+    &:before {
+      @apply bg-white;
     }
   }
   &:hover {
