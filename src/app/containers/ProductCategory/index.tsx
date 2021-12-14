@@ -10,6 +10,7 @@ import { ProductGrid } from "../../components/products-grid";
 // Images
 import Image from "../../assets/images/matress.png";
 import Mattress from "../../assets/images/materac.jpg";
+import { Banner } from "../../components/baners";
 
 interface Category {
   color: string;
@@ -159,6 +160,7 @@ export function ProductCategory(props: Category) {
           <ProductGrid items={Products} />
         </ExtendedProductList>
       </ProductList>
+      <Banner />
     </Main>
   );
 }
