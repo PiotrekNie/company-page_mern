@@ -14,7 +14,7 @@ interface ListProps {
 
 const SitebarContainer = styled.div`
   ${tw`
-    bg-gray-100 py-8 px-6
+    bg-gray-100 py-8 px-6 text-base
   `}
 `;
 

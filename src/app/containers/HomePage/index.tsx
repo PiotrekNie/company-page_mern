@@ -39,7 +39,7 @@ export function HomePage() {
             "By better understanding the various aspects of surfing, you will improve faster and have more fun in the water."
           }
           url={"/o-nas"}
-          linkText={"dowiedz się więcej"}
+          linkText={"Dowiedz się więcej"}
         />
         <SectionIcons />
         <SectionContact />
