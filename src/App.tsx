@@ -14,6 +14,7 @@ import { ProductCategory } from "./app/containers/ProductCategory";
  */
 import BackgroundBottom from "./app/assets/images/background-bottom.jpg";
 import { Footer } from "./app/components/footer";
+import { ProductPage } from "./app/containers/ProductsPage";
 
 const AppContainer = styled.div`
   background: linear-gradient(to bottom, #fecd4d 0%, #ef647b 100%);
@@ -81,12 +82,13 @@ function App() {
         <PageContainer>
           <NavBar />
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/" component={HomePage}>
               <HomePage />
             </Route>
-            <Route path="/materace">
+            <Route exact path="/materace" component={ProductCategory}>
               <ProductCategory color={"#fecd4d"} title={"Materace"} />
             </Route>
+            <Route exact path="/produkt/materac-ewa" component={ProductPage} />
           </Switch>
           <Footer />
           <AppContainerBg src={BackgroundBottom} alt="MaxMeble" />
